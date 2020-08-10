@@ -16,7 +16,7 @@ sudo cp -v --preserve $TARGET $TARGET.save
 # use SED magic to change the default limit from 40M to 128M
 # write result to temp file
 
-sudo cat $TARGET | sed -e 's/post_max_size = 40M/post_max_size = 128M/g' | sed -e 's/upload_max_filesize = 40M/upload_max_filesize = 128MF/g' > $TMPFILE
+sudo cat $TARGET | sed -e 's/post_max_size = 40M/post_max_size = 128M/g' | sed -e 's/upload_max_filesize = 40M/upload_max_filesize = 128M/g' > $TMPFILE
 
 #copy TMP file to production file, leaving privs alone
 
